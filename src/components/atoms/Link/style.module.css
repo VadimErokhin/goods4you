@@ -1,0 +1,10 @@
+.link {
+  text-decoration: none;
+  color: var(--main-white);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.link:not(:last-child) {
+  margin-right: 36px;
+}
