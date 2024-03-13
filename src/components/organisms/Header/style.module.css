@@ -1,10 +1,11 @@
 .header {
-  padding: 27px 0 17px 0;
   background-color: var(--main-theme);
 }
 
 .wrapper {
+  padding: 27px 0 17px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 1px solid var(--gray-300);
 }

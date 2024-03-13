@@ -1,21 +1,17 @@
-import Link from '../../atoms/Link/index.js';
-import style from './style.module.css'
-// import {navItems} from './config'
-const navItems = [
-  "Catalog",
-  "About us",
-  "Product selection",
-  "Our team",
-  "FAQ",
-  "For staff",
-];
+import Link from "../../atoms/LinkItem/index.js";
+import style from "./style.module.css";
+import { NavItem, navItems } from "./config";
 
 function Navigation() {
-  return ( <ul className={style.list}>
-    {navItems.map((item: string, index:number) => (
-      <Link key={index}>{item}</Link>
-    ))}
-  </ul> );
+  return (
+    <ul className={style.list}>
+      {navItems.map((item: NavItem, index: number) => (
+        <Link href={item.href} key={index}>
+          {item.name}
+        </Link>
+      ))}
+    </ul>
+  );
 }
 
 export default Navigation;

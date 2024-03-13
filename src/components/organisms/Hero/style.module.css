@@ -1,0 +1,21 @@
+.hero {
+  padding: 100px 0;
+  background-color: var(--main-theme);
+  background-image: url(../../../../src/assets/img/background-text-hero.svg);
+  background-repeat: no-repeat;
+  background-position: center 70%;
+}
+
+.title {
+  margin: 0;
+  margin-bottom: 20px;
+  color: var(--main-white);
+  font-weight: 400;
+  font-size: 36px;
+  max-width: 580px;
+}
+
+.text {
+  max-width: 480px;
+  margin-bottom: 40px;
+}
