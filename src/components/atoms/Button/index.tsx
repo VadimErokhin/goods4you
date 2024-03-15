@@ -18,6 +18,9 @@ function Button(props: ButtonProps) {
 
   const classes = useMemo(() => {
     let resultClasses = style.btn;
+    if (props.className) {
+      resultClasses += ` ${props.className}`;
+    }
 
     if (type === ButtonTypes.Apply) {
       resultClasses += ` ${style.btnApply}`;
@@ -32,7 +35,7 @@ function Button(props: ButtonProps) {
     }
 
     return resultClasses;
-  }, [type]);
+  }, [type, props.className]);
 
   return <button className={classes}>{props.children}</button>;
 }

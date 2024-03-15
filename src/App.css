@@ -1,9 +1,12 @@
 :root {
   --main-white: #fff;
   --main-theme: #484283;
+  --beige-500: #fff4ee;
+  --beige-700: #dbbba9;
   --gray-300: #d9d9d9;
   --gray-600: #808080;
-  --gray-700: rgba(36, 36, 36, 0.5);
+  --gray-700: #444b58;
+  --gray-800: rgba(36, 36, 36, 0.5);
   --orange-500: #f14f4f;
 }
 

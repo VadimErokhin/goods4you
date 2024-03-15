@@ -19,6 +19,7 @@ function InfoText(props: InfoTextProps) {
 
   const classes = useMemo(() => {
     let resultClasses = style.text;
+
     if (props.className) {
       resultClasses += ` ${props.className}`;
     }
@@ -32,7 +33,7 @@ function InfoText(props: InfoTextProps) {
     }
 
     return resultClasses;
-  }, [type]);
+  }, [type, props.className]);
 
   return <p className={classes}>{props.children}</p>;
 }

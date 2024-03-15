@@ -1,0 +1,21 @@
+.label {
+  color: var(--gray-700);
+}
+
+.input {
+  display: none;
+}
+
+.customCheckbox {
+  display: inline-block;
+  margin-right: 10px;
+  width: 24px;
+  height: 24px;
+  border: 1px solid var(--beige-700);
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.input:checked + .customCheckbox {
+  background-color: var(--main-theme);
+}

@@ -10,3 +10,8 @@ export enum ButtonTypes {
   Reset = "reset",
   Pagination = "pagination",
 }
+
+export enum TitlesColorTypes {
+  White = "white",
+  Black = "black",
+}

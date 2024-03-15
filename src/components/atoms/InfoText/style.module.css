@@ -6,9 +6,9 @@
 }
 
 .secondaryText {
-  color: var(--gray-600);
+  color: var(--gray-700);
 }
 
 .infoText {
-  color: var(--gray-700);
+  color: var(--gray-600);
 }

@@ -1,0 +1,16 @@
+.table {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: inline-grid;
+  grid-template-columns: 120px 120px;
+  grid-template-rows: auto;
+  background-color: var(--beige-500);
+  margin-bottom: 32px;
+}
+
+.tableItem {
+  padding: 24px 5px 24px 5px;
+  text-align: center;
+  border: 0.285714px solid var(--beige-700);
+}

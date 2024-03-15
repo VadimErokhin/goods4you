@@ -4,3 +4,12 @@
   background-color: var(--orange-500);
   border: none;
 }
+
+.btnApply {
+  background-color: var(--gray-700);
+}
+
+.btnReset {
+  background-color: transparent;
+  color: var(--gray-700);
+}
