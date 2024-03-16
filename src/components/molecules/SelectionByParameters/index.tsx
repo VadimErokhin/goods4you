@@ -15,8 +15,12 @@ function SelectionByParameters() {
         Category
       </InfoText>
       <CategoryTable />
-      <Button type={ButtonTypes.Apply}>Apply</Button>
-      <Button type={ButtonTypes.Reset}>Reset</Button>
+      <Button aria-label="Применить" type={ButtonTypes.Apply}>
+        Apply
+      </Button>
+      <Button aria-label="Сбросить" type={ButtonTypes.Reset}>
+        Reset
+      </Button>
     </div>
   );
 }

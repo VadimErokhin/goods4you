@@ -37,11 +37,7 @@ function Button(props: ButtonProps) {
     return resultClasses;
   }, [type, props.className]);
 
-  return (
-    <button aria-label="Кнопка" className={classes}>
-      {props.children}
-    </button>
-  );
+  return <button className={classes}>{props.children}</button>;
 }
 
 export default Button;

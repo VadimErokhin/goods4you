@@ -14,7 +14,7 @@ function Hero() {
           We sell smartphones, laptops, clothes, shoes and many other products
           at low prices
         </InfoText>
-        <Button>Go to shopping</Button>
+        <Button aria-label="За покупками">Go to shopping</Button>
       </div>
     </section>
   );

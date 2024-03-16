@@ -17,7 +17,9 @@ function CardsTable() {
             <Price>{card.price}$</Price>
           </li>
         ))}
-        <Button className={style.btn}>Show more</Button>
+        <Button aria-label="Показать еще" className={style.btn}>
+          Show more
+        </Button>
       </ul>
     </div>
   );

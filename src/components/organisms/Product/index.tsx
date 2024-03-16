@@ -26,7 +26,9 @@ function Product() {
         <CheckboxWrapper />
         <div className={style.btnWrapper}>
           <p>{page} of 2</p>
-          <Button type={ButtonTypes.Pagination}>Next page</Button>
+          <Button aria-label="Следующая" type={ButtonTypes.Pagination}>
+            Next page
+          </Button>
         </div>
       </div>
     </section>
