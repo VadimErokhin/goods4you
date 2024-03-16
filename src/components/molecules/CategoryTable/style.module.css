@@ -13,4 +13,5 @@
   padding: 24px 5px 24px 5px;
   text-align: center;
   border: 0.285714px solid var(--beige-700);
+  cursor: pointer;
 }

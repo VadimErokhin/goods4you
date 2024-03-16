@@ -1,0 +1,10 @@
+.footer {
+  padding: 21px 0 18px 0;
+  background-color: var(--gray-700);
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

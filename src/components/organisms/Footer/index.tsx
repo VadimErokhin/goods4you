@@ -1,16 +1,16 @@
-import style from "./style.module.css";
 import Logo from "../../atoms/Logo";
 import Navigation from "../../molecules/Navigation";
+import style from "./style.module.css";
 
-function Header() {
+function Footer() {
   return (
-    <header className={style.header}>
+    <section className={style.footer}>
       <div className={`container ${style.wrapper}`}>
         <Logo />
         <Navigation />
       </div>
-    </header>
+    </section>
   );
 }
 
-export default Header;
+export default Footer;
