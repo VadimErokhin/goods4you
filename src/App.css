@@ -14,3 +14,9 @@
 .container {
   margin: 0 130px;
 }
+
+@media (max-width: 600px) {
+  .container {
+    margin: 0 15px;
+  }
+}

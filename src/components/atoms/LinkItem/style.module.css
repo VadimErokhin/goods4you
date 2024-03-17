@@ -9,3 +9,9 @@
 .link:not(:last-child) {
   margin-right: 36px;
 }
+
+@media (max-width: 600px) {
+  .link:not(:last-child) {
+    margin-right: 20px;
+  }
+}

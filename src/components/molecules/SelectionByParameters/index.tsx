@@ -6,10 +6,14 @@ import { ButtonTypes, TextTypes } from "../../types";
 import CategoryTable from "../CategoryTable";
 import style from "./style.module.css";
 
-function SelectionByParameters() {
+interface SelectionByParametersProps {
+  className: string;
+}
+
+function SelectionByParameters(props: SelectionByParametersProps) {
   const [state, setState] = useState("");
   return (
-    <div className={style.selection}>
+    <div className={`${style.selection} ${props.className}`}>
       <SubTitle className={style.subtitle}>
         Selection <br /> by parameters
       </SubTitle>

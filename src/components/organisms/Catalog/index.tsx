@@ -8,7 +8,7 @@ function Catalog() {
       <div className="container">
         <TitleSection className={style.title}>Catalog</TitleSection>
         <div className={style.wrapper}>
-          <SelectionByParameters />
+          <SelectionByParameters className={style.selection} />
           <CardsList />
         </div>
       </div>

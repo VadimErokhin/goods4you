@@ -7,7 +7,7 @@ function Footer() {
     <section className={style.footer}>
       <div className={`container ${style.wrapper}`}>
         <Logo />
-        <Navigation />
+        <Navigation className={style.navigation} />
       </div>
     </section>
   );

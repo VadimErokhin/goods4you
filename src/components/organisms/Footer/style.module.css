@@ -8,3 +8,13 @@
   align-items: center;
   justify-content: space-between;
 }
+
+@media (max-width: 1000px) {
+  .navigation {
+    display: none;
+  }
+
+  .wrapper {
+    justify-content: center;
+  }
+}

@@ -6,20 +6,22 @@ import style from "./style.module.css";
 
 function CardsList() {
   return (
-    <ul className={style.listWrapper}>
-      {cards.map((card: Card, index) => (
-        <li key={index}>
-          <a href={card.href}>
-            <img className={style.img} src={card.src} alt="shoes" />
-          </a>
-          <ProductName>{card.name}</ProductName>
-          <Price>{card.price}$</Price>
-        </li>
-      ))}
+    <div className={style.contentWrapper}>
+      <ul className={style.listWrapper}>
+        {cards.map((card: Card, index) => (
+          <li key={index}>
+            <a href={card.href}>
+              <img className={style.img} src={card.src} alt="shoes" />
+            </a>
+            <ProductName>{card.name}</ProductName>
+            <Price>{card.price}$</Price>
+          </li>
+        ))}
+      </ul>
       <Button aria-label="Показать еще" className={style.btn}>
         Show more
       </Button>
-    </ul>
+    </div>
   );
 }
 

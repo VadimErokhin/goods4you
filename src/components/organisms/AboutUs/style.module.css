@@ -42,3 +42,9 @@
   width: 30px;
   background-color: var(--main-white);
 }
+
+@media (max-width: 1150px) {
+  .img {
+    display: none;
+  }
+}
