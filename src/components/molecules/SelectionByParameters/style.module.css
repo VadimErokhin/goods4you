@@ -5,6 +5,7 @@
   flex-direction: column;
   background-color: var(--beige-500);
   align-self: flex-start;
+  width: 280px;
 }
 
 .subtitle {

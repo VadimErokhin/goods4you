@@ -1,48 +1,44 @@
-// interface Image {
-//   src: string;
-//   href: string;
-// }
+interface Image {
+  src: string;
+  name: string;
+  position: string;
+}
 
-export const images = [
+export const images: Array<Image[]> = [
   [
-    "../../../../public/Член команды 1.png",
-    "../../../../public/Член команды 2.png",
+    {
+      src: "../../../../public/person1.png",
+      name: "Maxim",
+      position: "Administrator",
+    },
+    {
+      src: "../../../../public/person2.png",
+      name: "Vlad",
+      position: "Developer",
+    },
   ],
   [
-    "../../../../public/Член команды 3.png",
-
-    "../../../../public/Член команды 4.png",
+    {
+      src: "../../../../public/person3.png",
+      name: "Yulia",
+      position: "HR",
+    },
+    {
+      src: "../../../../public/person4.png",
+      name: "Dima",
+      position: "Manager",
+    },
   ],
   [
-    "../../../../public/Член команды 5.png",
-
-    "../../../../public/Член команды 6.png",
+    {
+      src: "../../../../public/person5.png",
+      name: "Vika",
+      position: "Designer",
+    },
+    {
+      src: "../../../../public/person6.png",
+      name: "Lena",
+      position: "Developer",
+    },
   ],
 ];
-
-// export const images: Array<Image[]> = [
-//   [
-//     { src: "../../../../public/Член команды 1.png", href: "#" },
-//     { src: "../../../../public/Член команды  2.png.png", href: "#" },
-//   ],
-//   [
-//     {
-//       src: "../../../../public/Член команды 3.png",
-//       href: "#",
-//     },
-//     {
-//       src: "../../../../public/Член команды 4.png",
-//       href: "#",
-//     },
-//   ],
-//   [
-//     {
-//       src: "../../../../public/Член команды 5.png",
-//       href: "#",
-//     },
-//     {
-//       src: "../../../../public/Член команды 6.png",
-//       href: "#",
-//     },
-//   ],
-// ];

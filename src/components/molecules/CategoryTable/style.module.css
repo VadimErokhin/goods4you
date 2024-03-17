@@ -2,16 +2,34 @@
   list-style-type: none;
   padding: 0;
   margin: 0;
-  display: inline-grid;
-  grid-template-columns: 120px 120px;
-  grid-template-rows: auto;
   background-color: var(--beige-500);
   margin-bottom: 32px;
+  border: 1px solid var(--beige-700);
 }
 
 .tableItem {
-  padding: 24px 5px 24px 5px;
   text-align: center;
-  border: 0.285714px solid var(--beige-700);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.tableItem:not(:last-child) {
+  border-bottom: 1px solid var(--beige-700);
+}
+
+.btn {
+  position: relative;
+  padding: 24px 5px 24px 5px;
+  background: transparent;
+  border: none;
   cursor: pointer;
+}
+
+.active {
+  color: var(--main-theme);
+  text-decoration: underline;
+}
+
+.btn:first-child {
+  border-right: 1px solid var(--beige-700);
 }

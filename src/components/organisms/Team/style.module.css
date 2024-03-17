@@ -1,10 +1,9 @@
 .team {
-  padding: 60px 0;
+  padding: 60px 0 240px 0;
   background-color: var(--main-theme);
   background-image: url(../../../assets/img/backgroundTeam.svg);
   background-repeat: no-repeat;
   background-position: top right;
-  min-height: 1190px;
 }
 
 .title {
@@ -18,7 +17,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
-  /* max-width: 1180px; */
   gap: 20px;
 }
 
@@ -26,6 +24,12 @@
   margin-bottom: 20px;
 }
 
+.listItem {
+  cursor: pointer;
+  display: grid;
+  gap: 20px;
+}
+
 .listItem:nth-child(2) {
-  padding-top: 100px;
+  transform: translateY(100px);
 }

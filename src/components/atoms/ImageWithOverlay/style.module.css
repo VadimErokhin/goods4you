@@ -1,0 +1,40 @@
+.img {
+  display: block;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.wrapper:hover .overlay {
+  opacity: 1;
+  background-color: rgba(36, 36, 36, 0.51);
+  transition: opacity 0.4s ease-in-out;
+}
+
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+}
+
+.title {
+  margin: 0;
+  margin-bottom: 8px;
+  font-weight: 700;
+  color: var(--main-white);
+}
+
+.description {
+  color: var(--main-white);
+  font-weight: 600;
+}

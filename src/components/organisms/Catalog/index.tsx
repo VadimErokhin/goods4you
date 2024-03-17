@@ -1,5 +1,5 @@
 import TitleSection from "../../atoms/TitleSection";
-import CardsTable from "../../molecules/CardsTable";
+import CardsList from "../../molecules/CardsList";
 import SelectionByParameters from "../../molecules/SelectionByParameters";
 import style from "./style.module.css";
 function Catalog() {
@@ -9,7 +9,7 @@ function Catalog() {
         <TitleSection className={style.title}>Catalog</TitleSection>
         <div className={style.wrapper}>
           <SelectionByParameters />
-          <CardsTable />
+          <CardsList />
         </div>
       </div>
     </section>

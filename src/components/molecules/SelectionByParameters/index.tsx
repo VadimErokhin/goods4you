@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Button from "../../atoms/Button";
 import InfoText from "../../atoms/InfoText";
 import SubTitle from "../../atoms/SubTitile";
@@ -6,6 +7,7 @@ import CategoryTable from "../CategoryTable";
 import style from "./style.module.css";
 
 function SelectionByParameters() {
+  const [state, setState] = useState("");
   return (
     <div className={style.selection}>
       <SubTitle className={style.subtitle}>
@@ -14,7 +16,7 @@ function SelectionByParameters() {
       <InfoText className={style.infoText} type={TextTypes.Secondary}>
         Category
       </InfoText>
-      <CategoryTable />
+      <CategoryTable state={state} setState={setState} />
       <Button aria-label="Применить" type={ButtonTypes.Apply}>
         Apply
       </Button>

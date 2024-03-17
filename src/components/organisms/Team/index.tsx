@@ -2,6 +2,7 @@ import TitleSection from "../../atoms/TitleSection";
 import { TitlesColorTypes } from "../../types";
 import { images } from "./config";
 import style from "./style.module.css";
+import ImageWithOverlay from "../../atoms/ImageWithOverlay";
 
 function Team() {
   return (
@@ -14,7 +15,13 @@ function Team() {
           {images.map((column, index) => (
             <li className={style.listItem} key={index}>
               {column.map((img, i) => (
-                <img className={style.img} key={`${index}-${i}`} src={img} />
+                <ImageWithOverlay
+                  title={img.name}
+                  description={img.position}
+                  className={style.img}
+                  key={`${index}-${i}`}
+                  src={img.src}
+                />
               ))}
             </li>
           ))}
