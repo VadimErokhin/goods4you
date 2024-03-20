@@ -1,11 +1,6 @@
 import style from "./style.module.css";
 
-// interface LogoProps {
-//   children:  React.ReactNode,
-// }
-
 function Logo() {
-  // return ( <a  className={style.logo} href="#">{children}</a> );
   return (
     <a className={style.logo} href="#">
       <svg

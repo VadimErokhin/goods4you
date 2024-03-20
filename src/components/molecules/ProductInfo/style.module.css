@@ -1,0 +1,29 @@
+.productId {
+  margin-right: 10px;
+}
+
+.productIdWrapper {
+  display: flex;
+}
+
+.categoryWrapper {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.categoryWrapper:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.categoriesContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.headerWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 48px;
+}

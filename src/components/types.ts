@@ -2,6 +2,7 @@ export enum TextTypes {
   Primary = "primary",
   Secondary = "secondary",
   Info = "info",
+  Description = "description",
 }
 
 export enum ButtonTypes {

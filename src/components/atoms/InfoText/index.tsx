@@ -32,6 +32,10 @@ function InfoText(props: InfoTextProps) {
       resultClasses += ` ${style.infoText}`;
     }
 
+    if (type === TextTypes.Description) {
+      resultClasses += ` ${style.description}`;
+    }
+
     return resultClasses;
   }, [type, props.className]);
 

@@ -7,7 +7,7 @@ import { ButtonTypes, TextTypes } from "../../types";
 import style from "./style.module.css";
 import Button from "../../atoms/Button";
 
-function Product() {
+function TypesOfProducts() {
   const [page, setPage] = useState(1);
 
   return (
@@ -35,4 +35,4 @@ function Product() {
   );
 }
 
-export default Product;
+export default TypesOfProducts;
