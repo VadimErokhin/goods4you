@@ -6,6 +6,7 @@ interface ButtonProps {
   children: React.ReactNode;
   type?: ButtonTypes;
   className?: string;
+  onClick?: () => void;
 }
 
 function Button(props: ButtonProps) {
@@ -37,7 +38,11 @@ function Button(props: ButtonProps) {
     return resultClasses;
   }, [type, props.className]);
 
-  return <button className={classes}>{props.children}</button>;
+  return (
+    <button onClick={props.onClick} className={classes}>
+      {props.children}
+    </button>
+  );
 }
 
 export default Button;

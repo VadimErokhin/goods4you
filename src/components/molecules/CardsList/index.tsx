@@ -1,24 +1,36 @@
 import Button from "../../atoms/Button";
-import Price from "../../atoms/Price";
-import ProductName from "../../atoms/ProductName";
-import { Card, cards } from "./config";
+import { PaginationParams, ProductData } from "../../types";
+import Card from "../Card";
 import style from "./style.module.css";
 
-function CardsList() {
+interface CardsListProps {
+  pagination: PaginationParams;
+  setPaginationState: (newParams: PaginationParams) => void;
+  products?: ProductData[];
+}
+
+function CardsList(props: CardsListProps) {
+  function handleShowMore() {
+    if (!props.products) return;
+    props.setPaginationState({
+      skip: props.pagination.skip + 9,
+      limit: props.pagination.limit,
+    });
+  }
   return (
     <div className={style.contentWrapper}>
       <ul className={style.listWrapper}>
-        {cards.map((card: Card, index) => (
-          <li key={index}>
-            <a href={card.href}>
-              <img className={style.img} src={card.src} alt="shoes" />
-            </a>
-            <ProductName>{card.name}</ProductName>
-            <Price>{card.price}$</Price>
+        {props.products?.map((card: ProductData, index) => (
+          <li className={style.listItem} key={index}>
+            <Card data={card} />
           </li>
         ))}
       </ul>
-      <Button aria-label="Показать еще" className={style.btn}>
+      <Button
+        onClick={handleShowMore}
+        aria-label="Показать еще"
+        className={style.btn}
+      >
         Show more
       </Button>
     </div>

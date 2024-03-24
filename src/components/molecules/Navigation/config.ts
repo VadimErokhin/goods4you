@@ -6,26 +6,26 @@ export interface NavItem {
 export const navItems: NavItem[] = [
   {
     name: "Catalog",
-    href: "#",
+    href: "#catalog",
   },
   {
     name: "About us",
-    href: "#",
+    href: "#aboutUs",
   },
   {
     name: "Product selection",
-    href: "#",
+    href: "#products",
   },
   {
     name: "Our team",
-    href: "#",
+    href: "#team",
   },
   {
     name: "FAQ",
-    href: "#",
+    href: "#faq",
   },
   {
     name: "For staff",
-    href: "#",
+    href: "/products",
   },
 ];

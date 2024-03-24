@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 :root {
   --main-white: #fff;
   --main-theme: #484283;

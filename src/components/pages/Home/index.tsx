@@ -8,8 +8,11 @@ import Header from "../../organisms/HeaderWithNavigation";
 import Hero from "../../organisms/Hero";
 import Team from "../../organisms/Team";
 import TypesOfProducts from "../../organisms/TypesOfProducts";
+import { useGetCategoriesQuery } from "../../../services/api";
 
 function Home() {
+  const { data } = useGetCategoriesQuery(undefined);
+
   return (
     <div className={style.main}>
       <Header />

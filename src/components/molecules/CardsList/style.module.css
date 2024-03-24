@@ -8,6 +8,11 @@
   gap: 11px 20px;
 }
 
+.link {
+  display: block;
+  margin-bottom: 10px;
+}
+
 .contentWrapper {
   display: flex;
   flex-direction: column;

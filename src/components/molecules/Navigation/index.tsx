@@ -7,10 +7,23 @@ interface NavigationProps {
 }
 
 function Navigation(props: NavigationProps) {
+  const handleClickScroll = (e: React.SyntheticEvent<HTMLAnchorElement>) => {
+    const href = e.target.href;
+    if (!href.includes("#")) return;
+
+    e.preventDefault();
+    const itemId = href.split("#")[1];
+    const element = document.getElementById(itemId);
+
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <ul className={`${style.list} ${props.className}`}>
       {navItems.map((item: NavItem, index: number) => (
-        <Link href={item.href} key={index}>
+        <Link onClick={handleClickScroll} href={item.href} key={index}>
           {item.name}
         </Link>
       ))}

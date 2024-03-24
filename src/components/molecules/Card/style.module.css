@@ -1,0 +1,31 @@
+.link {
+  display: block;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.productName {
+  margin-bottom: 3px;
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  flex: 1 1 auto;
+}
+
+.btn {
+  align-self: center;
+}
+
+.img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.imgWrapper {
+  height: 293px;
+}

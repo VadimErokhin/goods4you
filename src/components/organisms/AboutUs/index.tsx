@@ -5,7 +5,7 @@ import style from "./style.module.css";
 
 function AboutUs() {
   return (
-    <section className={style.aboutUs}>
+    <section id="aboutUs" className={style.aboutUs}>
       <div className={`${style.contentWrapper} container`}>
         <div className={style.textWrapper}>
           <TitleSection className={style.title} type={TitlesColorTypes.White}>

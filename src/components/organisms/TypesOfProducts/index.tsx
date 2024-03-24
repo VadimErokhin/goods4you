@@ -11,7 +11,7 @@ function TypesOfProducts() {
   const [page, setPage] = useState(1);
 
   return (
-    <section className={style.product}>
+    <section id="products" className={style.product}>
       <div className={`${style.contentWrapper} container`}>
         <div className={style.titleWrapper}>
           <TitleSection className={style.title}>

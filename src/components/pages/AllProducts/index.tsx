@@ -2,12 +2,37 @@ import style from "./style.module.css";
 import TitleSection from "../../atoms/TitleSection";
 import SearchInput from "../../atoms/SearchInput";
 import HeaderWithBack from "../../organisms/HeaderWithBack";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "../../atoms/Button";
 import CardsList from "../../molecules/CardsList";
+import { useGetProductsQuery } from "../../../services/api";
+import { PaginationParams, ProductData } from "../../types";
+import { usePagination } from "../../../hooks/usePagination";
 
 function AllProducts() {
   const [value, setValue] = useState("");
+
+  const {
+    products,
+    paginationParams,
+    setProducts,
+    setPaginationParams,
+    clear,
+  } = usePagination();
+
+  const { data } = useGetProductsQuery({
+    paging: paginationParams,
+    query: value,
+  });
+
+  useEffect(() => {
+    if (!data) return;
+    setProducts((prev) => [...prev, ...data.products]);
+  }, [data]);
+
+  useEffect(() => {
+    clear();
+  }, [value, clear]);
 
   return (
     <div className="main">
@@ -22,7 +47,11 @@ function AllProducts() {
           />
           <Button>Search</Button>
         </div>
-        <CardsList />
+        <CardsList
+          products={products}
+          setPaginationState={setPaginationParams}
+          pagination={paginationParams}
+        />
       </div>
     </div>
   );
