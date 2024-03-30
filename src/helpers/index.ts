@@ -1,8 +1,10 @@
 import { GetListParams, PaginationParams } from "../components/types";
 
-export function formatedPrice(basePrice: number, discount: number) {
-  console.log("formatedPrice");
-
+export function formatPrice(basePrice: number, discount: number) {
+  if (discount > 100) {
+    console.error("Not valid discount", discount);
+    return 0;
+  }
   return basePrice - Math.ceil((basePrice * discount) / 100);
 }
 
@@ -24,7 +26,7 @@ export const formatCategories = (categories: string[]) => {
   }, [] as string[][]);
 };
 
-function getQuerySign(url: string) {
+export function getQuerySign(url: string) {
   return url.includes("?") ? "&" : "?";
 }
 
@@ -50,7 +52,6 @@ export function buildGetProductCategoryUrl(params: GetListParams) {
 
 export function buildGetProductsUrl(params: GetListParams) {
   const str = params.query ? `/products/search?q=${params.query}` : "/products";
-  console.log(params, str);
 
   return addPaginationParams(str, params.paging);
 }

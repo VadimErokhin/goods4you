@@ -22,7 +22,7 @@ function AboutUs() {
         <img
           className={style.img}
           src="../../../../public/aboutUs.png"
-          alt="picture"
+          alt="decorative-picture"
         />
       </div>
     </section>

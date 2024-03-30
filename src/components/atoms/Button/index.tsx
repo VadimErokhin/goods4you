@@ -7,6 +7,7 @@ interface ButtonProps {
   type?: ButtonTypes;
   className?: string;
   onClick?: () => void;
+  disabled?: boolean;
 }
 
 function Button(props: ButtonProps) {
@@ -39,7 +40,11 @@ function Button(props: ButtonProps) {
   }, [type, props.className]);
 
   return (
-    <button onClick={props.onClick} className={classes}>
+    <button
+      disabled={props.disabled}
+      onClick={props.onClick}
+      className={classes}
+    >
       {props.children}
     </button>
   );

@@ -1,0 +1,34 @@
+.headerWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 48px;
+}
+
+.productIdWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.productId {
+  margin-right: 10px;
+}
+
+.categoryWrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.rating {
+  margin-right: 10px;
+}
+
+.btn {
+  max-width: 300px;
+  width: 100%;
+}
+
+.discountPrice {
+  min-width: 255px;
+}

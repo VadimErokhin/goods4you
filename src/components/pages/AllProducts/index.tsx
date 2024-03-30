@@ -6,12 +6,12 @@ import { useEffect, useState } from "react";
 import Button from "../../atoms/Button";
 import CardsList from "../../molecules/CardsList";
 import { useGetProductsQuery } from "../../../services/api";
-import { PaginationParams, ProductData } from "../../types";
 import { usePagination } from "../../../hooks/usePagination";
+import useDebounce from "../../../hooks/useDebounce";
 
 function AllProducts() {
   const [value, setValue] = useState("");
-
+  const debounceValue = useDebounce(value);
   const {
     products,
     paginationParams,
@@ -22,7 +22,7 @@ function AllProducts() {
 
   const { data } = useGetProductsQuery({
     paging: paginationParams,
-    query: value,
+    query: debounceValue,
   });
 
   useEffect(() => {

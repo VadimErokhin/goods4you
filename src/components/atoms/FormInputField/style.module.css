@@ -1,0 +1,19 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.wrapper:not(:last-child) {
+  margin-bottom: 24px;
+}
+.label {
+  min-width: 255px;
+}
+
+.input {
+  padding: 19px 9px 19px 6px;
+  border: none;
+  background-color: var(--gray-100);
+  width: 100%;
+  border-radius: 4px;
+}

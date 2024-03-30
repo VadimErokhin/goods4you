@@ -17,13 +17,12 @@ function Question(props: QuestionProps) {
 
   return (
     <div className={style.contentWrapper}>
-      <div className={style.wrapper}>
+      <button onClick={toggleSwownText} className={style.btn}>
         <p className={style.question}>Question {props.number}</p>
         <Plus
           className={isOpen ? `${style.active} ${style.plus}` : style.plus}
-          onClick={toggleSwownText}
         />
-      </div>
+      </button>
       {isOpen && (
         <InfoText className={style.text} type={TextTypes.Info}>
           Long answer to the first question
