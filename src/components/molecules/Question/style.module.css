@@ -1,0 +1,27 @@
+.question {
+  font-size: 20px;
+}
+
+.contentWrapper {
+  padding: 30px 0 21px 0;
+  border-bottom: 1px solid var(--black-900);
+}
+
+.contentWrapper:not(:last-child) {
+  border-top: 1px solid var(--black-900);
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.plus {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.active {
+  transform: rotate(45deg);
+}

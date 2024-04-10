@@ -1,0 +1,17 @@
+.link {
+  text-decoration: none;
+  color: var(--main-white);
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.link:not(:last-child) {
+  margin-right: 36px;
+}
+
+@media (max-width: 600px) {
+  .link:not(:last-child) {
+    margin-right: 20px;
+  }
+}

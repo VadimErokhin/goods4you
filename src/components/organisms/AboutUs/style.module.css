@@ -1,0 +1,50 @@
+.aboutUs {
+  background-color: var(--main-theme);
+  background-image: url(../../../assets/img/figure.svg);
+  background-repeat: no-repeat;
+  background-position: top left;
+  margin-bottom: 60px;
+}
+.contentWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.textWrapper {
+  display: flex;
+  padding-top: 220px;
+  flex-direction: column;
+  max-width: 456px;
+}
+
+.text {
+  max-width: 80%;
+}
+
+.title {
+  margin-bottom: 7px;
+}
+
+.signature {
+  position: relative;
+  color: var(--main-white);
+  font-size: 20px;
+  font-weight: 700;
+  align-self: flex-end;
+}
+
+.signature::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: -50px;
+  height: 3px;
+  width: 30px;
+  background-color: var(--main-white);
+}
+
+@media (max-width: 1150px) {
+  .img {
+    display: none;
+  }
+}

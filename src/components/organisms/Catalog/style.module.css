@@ -1,0 +1,18 @@
+.title {
+  margin-bottom: 32px;
+}
+
+.wrapper {
+  display: flex;
+  margin-bottom: 53px;
+}
+
+@media (max-width: 800px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .selection {
+    margin-bottom: 20px;
+  }
+}

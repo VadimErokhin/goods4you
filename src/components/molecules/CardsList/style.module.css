@@ -1,0 +1,32 @@
+.listWrapper {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 11px 20px;
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  flex: 1 1 auto;
+}
+
+.btn {
+  align-self: center;
+}
+
+.img {
+  display: block;
+  width: 100%;
+}
+
+@media (min-width: 2000px) {
+  .listWrapper {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}

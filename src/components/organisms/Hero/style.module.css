@@ -1,0 +1,32 @@
+.hero {
+  padding: 110px 0 95px;
+  background-color: var(--main-theme);
+  background-image: url(../../../../src/assets/img/background-text-hero.svg);
+  background-repeat: no-repeat;
+  background-position: center 70%;
+  margin-bottom: 57px;
+}
+
+.title {
+  margin: 0;
+  margin-bottom: 30px;
+  color: var(--main-white);
+  font-weight: 400;
+  font-size: 36px;
+  max-width: 580px;
+}
+
+.text {
+  max-width: 352px;
+  margin-bottom: 48px;
+}
+
+.btn {
+  margin-left: 14px;
+}
+
+@media (max-width: 1100px) {
+  .hero {
+    background-size: contain;
+  }
+}

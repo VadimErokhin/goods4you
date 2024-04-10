@@ -1,0 +1,23 @@
+.btn {
+  padding: 22px 47px;
+  color: var(--main-white);
+  background-color: var(--orange-500);
+  border: none;
+  cursor: pointer;
+}
+
+.btnApply {
+  background-color: var(--gray-700);
+}
+
+.btnReset {
+  background-color: transparent;
+  color: var(--gray-700);
+}
+
+.btnPagination {
+  background-color: transparent;
+  color: var(--gray-700);
+  border: 1px solid var(--gray-700);
+  border-radius: 4px;
+}
