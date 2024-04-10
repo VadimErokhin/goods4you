@@ -2,18 +2,25 @@ import InfoText from "../../atoms/InfoText";
 import SubTitle from "../../atoms/SubTitile";
 import { ProductData, TextTypes } from "../../types";
 import style from "./style.module.css";
-import { formatedPrice } from "../../../helpers";
+import { formatPrice } from "../../../helpers";
 import { useMemo } from "react";
 import Rating from "../../atoms/Rating";
+import Button from "../../atoms/Button";
+import { useNavigate } from "react-router-dom";
 
 interface ProductInfoProps {
   data: ProductData;
-  productId: string;
 }
 
 function ProductInfo(props: ProductInfoProps) {
-  const fPrice = useMemo(() => {
-    return formatedPrice(props.data.price, props.data.discountPercentage);
+  const navigate = useNavigate();
+
+  function navigateToEdit() {
+    navigate(`/product/${props.data.id}/edit`);
+  }
+
+  const formatedPrice = useMemo(() => {
+    return formatPrice(props.data.price, props.data.discountPercentage);
   }, [props.data.price, props.data.discountPercentage]);
 
   return (
@@ -24,7 +31,7 @@ function ProductInfo(props: ProductInfoProps) {
           <InfoText type={TextTypes.Description} className={style.productId}>
             SKU ID
           </InfoText>
-          <InfoText type={TextTypes.Secondary}>{props.productId}</InfoText>
+          <InfoText type={TextTypes.Secondary}>{props.data.id}</InfoText>
         </div>
       </div>
       <div className={style.categoriesContainer}>
@@ -44,7 +51,7 @@ function ProductInfo(props: ProductInfoProps) {
         </div>
         <div className={style.categoryWrapper}>
           <InfoText type={TextTypes.Description}>Discount price</InfoText>
-          <InfoText type={TextTypes.Secondary}>{fPrice}</InfoText>
+          <InfoText type={TextTypes.Secondary}>{formatedPrice}</InfoText>
         </div>
         <div className={style.categoryWrapper}>
           <InfoText type={TextTypes.Description}>Stock</InfoText>
@@ -64,6 +71,9 @@ function ProductInfo(props: ProductInfoProps) {
             {props.data.description}
           </InfoText>
         </div>
+        <Button onClick={navigateToEdit} className={style.btn}>
+          Edit
+        </Button>
       </div>
     </div>
   );

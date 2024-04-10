@@ -11,10 +11,14 @@
   border-top: 1px solid var(--black-900);
 }
 
-.wrapper {
+.btn {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .plus {

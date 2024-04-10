@@ -31,3 +31,8 @@
 .star {
   display: block;
 }
+
+.btn {
+  max-width: 300px;
+  width: 100%;
+}

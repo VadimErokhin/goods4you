@@ -10,7 +10,7 @@ function Rating(props: RatingProps) {
     const result = [];
     const roundRating = Math.round(props.rating);
     for (let i = 0; i < roundRating; i++) {
-      result.push(<Star />);
+      result.push(<Star key={i} />);
     }
     return result;
   }, [props.rating]);

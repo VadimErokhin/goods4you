@@ -32,8 +32,8 @@ export interface ProductData {
 }
 
 export interface PaginationParams {
-  skip: number;
-  limit: number;
+  skip?: number;
+  limit?: number;
 }
 
 export interface Pagination extends PaginationParams {
@@ -45,6 +45,8 @@ export interface ProductsResponse extends Pagination {
 }
 
 export interface GetListParams {
-  query: string;
+  query?: string;
   paging: PaginationParams;
 }
+
+export type ProductEditPayload = Partial<ProductData>;

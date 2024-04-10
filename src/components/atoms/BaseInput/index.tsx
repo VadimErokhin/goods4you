@@ -1,20 +1,26 @@
 import { HTMLInputTypeAttribute } from "react";
 
-interface BaseInputProps {
-  value: string;
-  placeholder: string;
-  onInput: (newValue: string) => void;
+interface BaseInputProps<T> {
+  value: T;
+  placeholder?: string;
+  onInput: (newValue: T) => void;
   type: HTMLInputTypeAttribute;
   className?: string;
 }
 
-function BaseInput(props: BaseInputProps) {
+function BaseInput<T = string>(props: BaseInputProps<T>) {
   function handleInput(ev: React.ChangeEvent<HTMLInputElement>) {
-    props.onInput(ev.target.value);
+    if (props.type === "number") {
+      const isValueNan = isNaN(ev.target.valueAsNumber);
+
+      props.onInput(isValueNan ? (0 as T) : (ev.target.valueAsNumber as T));
+      return;
+    }
+    props.onInput(ev.target.value as T);
   }
   return (
     <input
-      value={props.value}
+      value={!props.value ? "" : (props.value as string)}
       type={props.type}
       placeholder={props.placeholder}
       className={props.className}

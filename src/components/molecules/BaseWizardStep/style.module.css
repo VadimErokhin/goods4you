@@ -1,23 +1,13 @@
-.products {
-  margin-bottom: 60px;
-}
-
-.contentWrapper {
-  position: relative;
-  padding: 40px 100px;
-  background-color: var(--beige-500);
-}
-
 .title {
   margin-bottom: 7px;
 }
 
-.text {
+.header {
   position: relative;
   margin-bottom: 23px;
 }
 
-.text::after {
+.header::after {
   content: "";
   position: absolute;
   bottom: -12px;
@@ -27,14 +17,10 @@
   height: 1px;
 }
 
-.btnWrapper {
+.footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-@media (max-width: 600px) {
-  .contentWrapper {
-    padding: 10px 10px;
-  }
+  border-top: 1px solid var(--gray-600);
+  padding-top: 20px;
 }

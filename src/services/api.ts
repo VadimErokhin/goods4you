@@ -2,6 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import {
   GetListParams,
   ProductData,
+  ProductEditPayload,
   ProductsResponse,
 } from "../components/types";
 import { buildGetProductCategoryUrl, buildGetProductsUrl } from "../helpers";
@@ -16,10 +17,6 @@ export const apiService = createApi({
     getProduct: builder.query<ProductData, string>({
       query: (id) => `/products/${id}`,
     }),
-    // getLimitAndsSkipProducts: builder.query<unknown, []>({
-    //   query: (limit: string, skip: string) =>
-    //     `?limit=${limit}&skip=${skip}&select=title,price`,
-    // }),
     getProductCategory: builder.query<ProductsResponse, GetListParams>({
       query: (params) => buildGetProductCategoryUrl(params),
     }),
@@ -27,13 +24,21 @@ export const apiService = createApi({
     getProducts: builder.query<ProductsResponse, GetListParams>({
       query: (params) => buildGetProductsUrl(params),
     }),
+
+    updateForm: builder.mutation<ProductData, ProductEditPayload>({
+      query: ({ id, ...payload }) => ({
+        url: `products/${id}`,
+        method: "PATCH",
+        body: payload,
+      }),
+    }),
   }),
 });
 
 export const {
   useGetCategoriesQuery,
   useGetProductQuery,
-  // useGetLimitAndsSkipProductsQuery,
   useGetProductCategoryQuery,
   useGetProductsQuery,
+  useUpdateFormMutation,
 } = apiService;

@@ -1,5 +1,6 @@
 import Button from "../../atoms/Button";
 import { PaginationParams, ProductData } from "../../types";
+import BaseCardList from "../BaseCardList";
 import Card from "../Card";
 import style from "./style.module.css";
 
@@ -19,16 +20,11 @@ function CardsList(props: CardsListProps) {
   }
   return (
     <div className={style.contentWrapper}>
-      <ul className={style.listWrapper}>
-        {props.products?.map((card: ProductData, index) => (
-          <li className={style.listItem} key={index}>
-            <Card data={card} />
-          </li>
-        ))}
-      </ul>
+      {props.products && <BaseCardList products={props.products} />}
+
       <Button
         onClick={handleShowMore}
-        aria-label="Показать еще"
+        aria-label="Show more"
         className={style.btn}
       >
         Show more
