@@ -12,3 +12,7 @@
 .infoText {
   color: var(--gray-600);
 }
+
+.description {
+  color: var(--gray-400);
+}

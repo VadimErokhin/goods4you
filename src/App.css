@@ -1,9 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
 :root {
   --main-white: #fff;
   --main-theme: #484283;
   --beige-500: #fff4ee;
   --beige-700: #dbbba9;
+  --gray-200: #f7f7f7;
   --gray-300: #d9d9d9;
+  --gray-400: #b2b5bb;
   --gray-600: #808080;
   --gray-700: #444b58;
   --gray-800: rgba(36, 36, 36, 0.5);

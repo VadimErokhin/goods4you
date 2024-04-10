@@ -1,23 +1,9 @@
+import { useMemo } from "react";
+import { useGetCategoriesQuery } from "../../../services/api";
 import InfoText from "../../atoms/InfoText";
 import { TextTypes } from "../../types";
-import { Category, categories } from "./config";
 import style from "./style.module.css";
-
-const formatedCategories = categories.reduce((acc, item) => {
-  const rowLength = acc.length;
-  if (!rowLength) {
-    acc[0] = [item];
-  } else {
-    const currentRow = acc[rowLength - 1];
-    const cellLength = currentRow.length;
-    if (cellLength < 2) {
-      currentRow.push(item);
-    } else {
-      acc[rowLength] = [item];
-    }
-  }
-  return acc;
-}, [] as Category[][]);
+import { formatCategories } from "../../../helpers";
 
 interface CategoryTableProps {
   state: string;
@@ -25,27 +11,30 @@ interface CategoryTableProps {
 }
 
 function CategoryTable(props: CategoryTableProps) {
+  const { data } = useGetCategoriesQuery(undefined);
+  const formatedCategories = useMemo(() => {
+    return formatCategories(data ?? []);
+  }, [data]);
+
   return (
     <ul className={style.table}>
-      {formatedCategories.map((row: Category[], rowIndex) => (
+      {formatedCategories.map((row: string[], rowIndex) => (
         <li className={style.tableItem} key={rowIndex}>
-          {row.map((cell: Category, index) => (
+          {row.map((cell: string, index) => (
             <button
-              onClick={() => props.setState(cell.value)}
+              onClick={() => props.setState(cell)}
               className={
-                `${props.state}` === cell.value
+                `${props.state}` === cell
                   ? `${style.btn} ${style.active}`
                   : `${style.btn}`
               }
               key={`${rowIndex}-${index}`}
             >
               <InfoText
-                className={
-                  `${props.state}` === cell.value ? ` ${style.active}` : ""
-                }
+                className={`${props.state}` === cell ? ` ${style.active}` : ""}
                 type={TextTypes.Secondary}
               >
-                {cell.name}
+                {cell}
               </InfoText>
             </button>
           ))}

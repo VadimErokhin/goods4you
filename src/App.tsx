@@ -1,24 +1,25 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import AboutUs from "./components/organisms/AboutUs";
-import Catalog from "./components/organisms/Catalog";
-import Faq from "./components/organisms/FAQ";
-import Footer from "./components/organisms/Footer";
-import Header from "./components/organisms/Header";
-import Hero from "./components/organisms/Hero";
-import Product from "./components/organisms/Product";
-import Team from "./components/organisms/Team";
+import Home from "./components/pages/Home";
+import AllProducts from "./components/pages/AllProducts";
+import ProductPage from "./components/pages/ProductPage";
+import ErrorPage from "./components/pages/ErrorPage";
 
 function App() {
   return (
     <>
-      <Header />
-      <Hero />
-      <Catalog />
-      <AboutUs />
-      <Product />
-      <Team />
-      <Faq />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="products" element={<AllProducts />} />
+        <Route
+          path="product/:productId"
+          loader={async ({ params }) => {
+            console.log(params);
+          }}
+          element={<ProductPage />}
+        />
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
     </>
   );
 }

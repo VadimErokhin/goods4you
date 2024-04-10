@@ -6,7 +6,7 @@ import ImageWithOverlay from "../../atoms/ImageWithOverlay";
 
 function Team() {
   return (
-    <section className={style.team}>
+    <section id="team" className={style.team}>
       <div className="container">
         <TitleSection className={style.title} type={TitlesColorTypes.White}>
           Our team

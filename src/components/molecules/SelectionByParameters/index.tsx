@@ -8,10 +8,21 @@ import style from "./style.module.css";
 
 interface SelectionByParametersProps {
   className: string;
+  setCategory: (newCategory: string) => void;
 }
 
 function SelectionByParameters(props: SelectionByParametersProps) {
-  const [state, setState] = useState("");
+  const [currentCategory, setCurrentCategory] = useState("");
+
+  function applyCategory() {
+    props.setCategory(currentCategory);
+  }
+
+  function resetCategory() {
+    props.setCategory("");
+    setCurrentCategory("");
+  }
+
   return (
     <div className={`${style.selection} ${props.className}`}>
       <SubTitle className={style.subtitle}>
@@ -20,11 +31,19 @@ function SelectionByParameters(props: SelectionByParametersProps) {
       <InfoText className={style.infoText} type={TextTypes.Secondary}>
         Category
       </InfoText>
-      <CategoryTable state={state} setState={setState} />
-      <Button aria-label="Применить" type={ButtonTypes.Apply}>
+      <CategoryTable state={currentCategory} setState={setCurrentCategory} />
+      <Button
+        onClick={applyCategory}
+        aria-label="Применить"
+        type={ButtonTypes.Apply}
+      >
         Apply
       </Button>
-      <Button aria-label="Сбросить" type={ButtonTypes.Reset}>
+      <Button
+        onClick={resetCategory}
+        aria-label="Сбросить"
+        type={ButtonTypes.Reset}
+      >
         Reset
       </Button>
     </div>

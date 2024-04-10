@@ -4,6 +4,7 @@
   background-color: var(--orange-500);
   border: none;
   cursor: pointer;
+  border-radius: 4px;
 }
 
 .btnApply {

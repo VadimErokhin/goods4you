@@ -26,8 +26,8 @@
 }
 
 .active {
-  color: var(--main-theme);
-  text-decoration: underline;
+  color: var(--main-white);
+  background-color: var(--main-theme);
 }
 
 .btn:first-child {
